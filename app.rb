@@ -13,8 +13,7 @@ end
   end
 
   post '/checkout' do
-    @cart = params[:item]
-
+    #@cart = params[:item]
     erb :checkout
   end
 end
