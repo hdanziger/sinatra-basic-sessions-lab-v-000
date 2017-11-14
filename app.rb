@@ -1,6 +1,11 @@
 require_relative 'config/environment'
 
 class App < Sinatra::Base
+  configure do
+  enable :sessions
+  set :session_secret, "secret"
+end
+
 
   get '/' do
     erb :index
@@ -8,6 +13,6 @@ class App < Sinatra::Base
 
   post '/checkout' do
     @cart = params[:item]
-    erb 
+    erb :index
   end
 end
