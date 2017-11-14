@@ -14,6 +14,7 @@ end
 
   post '/checkout' do
     @cart = params[:item]
-    erb :index
+    
+    erb :checkout
   end
 end
